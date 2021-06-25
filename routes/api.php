@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get("/institution", "EgikController@index");
+Route::post("/institution", "EgikController@create");
+Route::put("/institution/{id}", "EgikController@update");
+Route::delete("/institution/{id}", "EgikController@delete");
